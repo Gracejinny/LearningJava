@@ -25,11 +25,12 @@ public class Problem {
     public static int[] power(int[] arr){
         int length = arr.length;
 
-
+        // arr의 길이가 이미 2의 정수 거듭제곱이라면 arr 그대로 반환
         if((length & (length-1))==0){
             return arr;
         }
 
+        // 추가해야 하는 0의 개수 계산
         int target = 1;
         while (target <length){
             target *=2;
@@ -37,6 +38,7 @@ public class Problem {
 
         int zeroNums = target - length;
 
+        // 0을 추가한 배열 반환
         int[] result = new int[target];
         for (int i = 0; i <length; i++){
             result[i] = arr[i];
