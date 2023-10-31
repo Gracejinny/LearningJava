@@ -1,10 +1,7 @@
-package exercise.chapter_34;
+package exercise.chapter_43;
 
 public class VIPCustomer extends Customer {
     static int serialNums = 1;
-    static{
-        System.out.println("VIP Customer 클래스가 로딩됩니다.");
-    }
     // 속성
     private String agentID;
     private double discountRatio;
@@ -31,12 +28,25 @@ public class VIPCustomer extends Customer {
         this.discountRatio = 0.1;
     }
     @Override
-    void printMyInfo(){
+    public void printMyInfo(){
         System.out.print("VIP");
         super.printMyInfo();
     }
 
     public void setAgentID(String agentID) {
         this.agentID = agentID;
+    }
+
+    @Override
+    public String toString() {
+        return "VIPCustomer{" +
+                "agentID='" + agentID + '\'' +
+                ", discountRatio=" + discountRatio +
+                ", customerID='" + customerID + '\'' +
+                ", name='" + name + '\'' +
+                ", customerGrade='" + customerGrade + '\'' +
+                ", bonusPoint=" + bonusPoint +
+                ", bonusPointRatio=" + bonusPointRatio +
+                '}';
     }
 }

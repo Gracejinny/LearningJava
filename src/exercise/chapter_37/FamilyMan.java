@@ -1,4 +1,4 @@
-package exercise.chpater_37;
+package exercise.chapter_37;
 
 public abstract class FamilyMan implements FamilyRole{
     protected String name;

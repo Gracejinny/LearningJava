@@ -1,12 +1,8 @@
-package exercise.chapter_34;
+package exercise.chapter_41;
 
-public class GoldCustomer extends Customer{
+public class GoldCustomer extends Customer {
 
     private double discountRatio;
-
-    static{
-        System.out.println("Gold Customer 클래스가 로딩됩니다.");
-    }
 
     @Override
     public int calculatePrice(int price){

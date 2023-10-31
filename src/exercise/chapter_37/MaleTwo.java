@@ -1,4 +1,4 @@
-package exercise.chpater_37;
+package exercise.chapter_37;
 
 public class MaleTwo extends FamilyMan implements FamilyRole, EmployeeRole{
 
