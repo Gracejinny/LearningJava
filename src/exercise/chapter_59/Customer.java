@@ -1,4 +1,4 @@
-package exercise.chapter_57;
+package exercise.chapter_59;
 
 import java.io.Serializable;
 import java.util.Objects;

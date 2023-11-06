@@ -1,11 +1,10 @@
-package exercise.chapter_57;
+package exercise.chapter_58;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Customer implements Serializable {
-
-    private final long serialVersionUID= 1L;
+    private final long serialVersionUID = 1L;
     // 속성
     static int serialNums = 1;
 
@@ -22,6 +21,10 @@ public class Customer implements Serializable {
         return price;
     }
 
+    public int getBonusPoint() {
+        return bonusPoint;
+    }
+
     Customer(){}
 
     public Customer(String customerID, String name) {
@@ -29,7 +32,7 @@ public class Customer implements Serializable {
         this.customerID = customerID;
     }
 
-    public Customer(String name){
+    Customer(String name){
         this.customerID = "Customer" + serialNums++;
         this.name = name;
         this.customerGrade = "SILVER";
@@ -38,22 +41,22 @@ public class Customer implements Serializable {
     }
 
     public void printMyInfo(){
-        System.out.printf("Customer(customerId=%s, name=%s, customerGrade=%s, bonusPoint=%d)\n",
+        System.out.printf("Customer(customerID=%s, name = %s, customerGrade = %s, bonusPoint = %d)\n",
                 this.customerID, this.name, this.customerGrade, this.bonusPoint);
     }
 
     @Override
     public String toString() {
-        return String.format("Customer(customerId=%s, name=%s, customerGrade=%s, bonusPoint=%d)",
+        return String.format("Customer(customerID=%s, name = %s, customerGrade = %s, bonusPoint = %d)\n",
                 this.customerID, this.name, this.customerGrade, this.bonusPoint);
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null){
+        if(obj == null){
             return false;
         }
-        if (obj instanceof Customer){
+        if(obj instanceof Customer){
             Customer customer = (Customer) obj;
             return customer.customerID == this.customerID;
         }
